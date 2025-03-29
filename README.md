@@ -2,20 +2,20 @@
 oracle, mybatis(+eclipse)를 이용한 간단게시판 구현
 
 ## 기술
-spring web mvc
-oracle
-mybatis
+spring web mvc <br>
+oracle <br>
+mybatis <br>
 
 ## 도메인
-user - userId, username, password
-board - boardId, userId, title, content
-comment - commentId, boardId, user_id, content
+user - userId, username, password <br>
+board - boardId, userId, title, content <br>
+comment - commentId, boardId, user_id, content <br>
 
 ## DB테이블
-user - user_id(pk), username, password
-board - board_id(pk), user_id(fk), title, content
-comment - comment_id(pk), board_id(fk), user_id(fk), content
-
+user - user_id(pk), username, password <br>
+board - board_id(pk), user_id(fk), title, content <br>
+comment - comment_id(pk), board_id(fk), user_id(fk), content <br>
+ 
 ```sql
 create table "user" (
     user_id number primary key,
@@ -48,36 +48,36 @@ foreign key(user_id) references "user"(user_id) on delete cascade;
 ```
 
 ## 요구사항
-회원 생성
-회원 전체조회
-회원 삭제
+회원 생성 <br>
+회원 전체조회 <br>
+회원 삭제 <br>
 
-게시글 작성
-게시글 전체 조회
-게시글 상세 조회
-게시글 수정
-게시글 삭제
+게시글 작성 <br>
+게시글 전체 조회 <br>
+게시글 상세 조회 <br>
+게시글 수정 <br>
+게시글 삭제 <br>
 
-댓글 작성
-게시글의 댓글 조회
-댓글 수정
-댓글 삭제
+댓글 작성 <br>
+게시글의 댓글 조회 <br>
+댓글 수정 <br>
+댓글 삭제 <br>
 
 ## 엔드 포인트
-POST	/api/user
-GET		/api/user
-DELETE	/api/user/{userId}
+POST	/api/user <br>
+GET		/api/user <br>
+DELETE	/api/user/{userId} <br>
 
-POST	/api/board
-GET		/api/board
-GET		/api/board/{boardId}
-PUT		/api/board/{boardId}
-DELETE	/api/board/{boardId}
+POST	/api/board <br>
+GET		/api/board <br>
+GET		/api/board/{boardId} <br>
+PUT		/api/board/{boardId} <br>
+DELETE	/api/board/{boardId} <br>
 
-POST	/api/comment
-GET		/api/comment
-PUT		/api/comment/{commentId}
-DELETE	/api/comment/{commentId}
+POST	/api/comment <br>
+GET		/api/comment <br>
+PUT		/api/comment/{commentId} <br>
+DELETE	/api/comment/{commentId} <br>
 
 ## 기타 사항
 - 주석은 User 기능에 중심적으로 작성
