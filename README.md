@@ -80,4 +80,7 @@ PUT		/api/comment/{commentId}
 DELETE	/api/comment/{commentId}
 
 ## 기타 사항
-주석은 User 기능에 중심적으로 작성
+- 주석은 User 기능에 중심적으로 작성
+- Cascade Delete 까지 테스트 완료
+- Comment 기능은 단순 반복 작업이라 생략
+
