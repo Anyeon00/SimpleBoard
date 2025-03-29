@@ -47,7 +47,7 @@ alter table "comment" add constraint fk_user_comment
 foreign key(user_id) references "user"(user_id) on delete cascade;
 ```
 
-## 요구사항
+## 기능 요구사항
 회원 생성 <br>
 회원 전체조회 <br>
 회원 삭제 <br>
