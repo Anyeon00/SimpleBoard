@@ -26,7 +26,7 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	@Transactional
 	public Long writeBoard(final WriteBoardInfo writeBoardInfo) {
-
+		//toDomain() 보다는, Board.create(...)가 나은 듯
 		return boardRepository.save(writeBoardInfo.toDomain());
 	}
 
