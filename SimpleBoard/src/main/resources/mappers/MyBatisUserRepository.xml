@@ -7,7 +7,7 @@
 <insert id="save" parameterType="User">
 	<!-- PK 자동 생성 : 내 블로그 "Oracle 사용방법 비교 정리"" 참고-->
 	<selectKey keyProperty="userId" resultType="Long" order="BEFORE">
-    	select seq_user.nextval from dual
+    		select seq_user.nextval from dual
 	</selectKey>
 	insert into "user"(user_id, username, "password") values(#{userId}, #{username}, #{password}) 
 </insert>  
