@@ -6,7 +6,7 @@
 <!-- Long save(Board board) -->
 <insert id="save" parameterType="Board">
 	<selectKey keyProperty="boardId" resultType="Long" order="BEFORE">
-    	select seq_board.nextval from dual
+    		select seq_board.nextval from dual
 	</selectKey>
 	insert into board (board_id, user_id, title, "content") values (#{boardId}, #{userId}, #{title}, #{content}) 
 </insert>
